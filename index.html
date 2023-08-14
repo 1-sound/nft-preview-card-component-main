@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Soft-blue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      --Very-dark-blue-bg: hsl(217, 54%, 11%);
+      --Very-dark-blue-card: hsl(216, 50%, 16%);
+      --Very-dark-blue-line: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+    @font-face {
+      font-family: 'Outfit';
+      src: url(https://fonts.google.com/specimen/Outfit);
+    }
+
+    body {
+      background-color: var(--Very-dark-blue-bg);
+      height: 100vh;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--Very-dark-blue-card);
+      width: 280px;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .card-img {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .view-icon-box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      border-radius: 8px;
+      background-color: hsl(178, 100%, 50%, 0.5);
+      opacity: 0;
+    }
+
+    .view-icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nft-img {
+      display: block;
+      margin: auto;
+      height: 280px;
+      border-radius: 8px;
+    }
+
+    .card-img:hover .view-icon-box {
+      opacity: 1;
+    }
+
+    .nft-name {
+      display: flex;
+      justify-content: left;
+      margin: 20px 0 20px 0;
+      font-size: 22px;
+      color: var(--White);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .nft-name:hover {
+      color: var(--Cyan);
+    }
+
+    .nft-text {
+      display: flex;
+      justify-content: center;
+      color: var(--Soft-blue);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .pricetime {
+      padding: 20px 0 18px;
+      display: flex;
+      justify-content: space-between ;
+      border-bottom: 1px solid var(--Very-dark-blue-line);
+    }
+
+    .price {
+      display: flex;
+      justify-content: center;
+      color: var(--Cyan);
+      font-weight: 600;
+      font-size: 15px;
+      gap: 8px;
+    }
+
+    .time {
+      display: flex;
+      justify-content: center;
+      color: var(--Soft-blue);
+      font-weight: 400;
+      font-size: 15px;
+      gap: 8px;
+    }
+
+    .creator {
+      margin-top: 18px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .creator-img {
+      border: 1px solid var(--White);
+      border-radius: 50%;
+      width: 30px;
+    }
+
+    .creator-text {
+      margin: 0 15px;
+      color: var(--Soft-blue);
+      font-weight: 400;
+      font: 15px;
+    }
+
+    .creator-name {
+      color: var(--White);
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .creator-name:hover {
+      color: var(--Cyan);
+    }
+
+    .attribution {
+      margin-top: 20px;
+      font-size: 11px;
+      text-align: center;
+      color: var(--Soft-blue);
+    }
+
+    .attribution a {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+      <section class="nft-card">
+        <div class="card">
+          <div class="card-img">
+            <div class="view-icon-box"><img class="view-icon" src="images/icon-view.svg" alt=""></div>
+            <img class="nft-img" src="images/image-equilibrium.jpg" alt="">
+          </div>
+          <div class="nft-name">
+            Equilibrium #3429</div>
+          <div class="nft-text">
+            Our Equilibrium collection promotes balance and calm.</div>
+          <div class="pricetime">
+            <div class="price">
+              <img src="images/icon-ethereum.svg" alt="">0.041 ETH
+            </div>
+            <div class="time">
+              <img src="images/icon-clock.svg" alt="">3 days left
+            </div>
+          </div>
+          <div class="creator">
+            <img class="creator-img" src="images/image-avatar.png" alt="">
+            <div class="creator-text">
+              Creation of <span class="creator-name">Jules Wyvern</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/1-sound">1-sound</a>.
+        </div>
+    </div>
+</body>
+
+</html>
